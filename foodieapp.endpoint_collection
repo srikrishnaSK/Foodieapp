@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "577c23f1-0efb-4864-86c9-f8e2a0f21f65",
+		"name": "foodieapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Userregister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"hari\",\n    \"password\": \"12345\",\n    \"firstname\" : \"bv\",\n    \"lastname\" : \"sh\",\n    \"email\" : \"bvsk@gmail.com\",\n    \"address\" : \"vijayawada Andhra Pradesh\",\n    \"phone\": \"900000000\",\n    \"merchant\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/userregister",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"userregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restuarantregister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"ksi222\",\n    \"password\" : \"ksi123455\",\n    \"restuarantname\" : \"alpha\",\n    \"category\" : \"Bar\",\n    \"location\" : \"Gachibowli City Hyderabad\",\n    \"contactdetails\" : \"1122334455\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/registerRestuarant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registerRestuarant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "abc",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"sri\",\n    \"password\" : \"1234566\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminApprove",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/approve/Dolphin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"approve",
+						"Dolphin"
+					]
+				},
+				"description": "http://localhost:8080/approve/Dolphin"
+			},
+			"response": []
+		},
+		{
+			"name": "addDish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resturantname\" : \"Dolphin\",\n    \"dishtype\" : \"Non Veg\",\n    \"cusine\" : \"Chinese\",\n    \"dishname\" : \"noodles\",\n    \"dishprice\" : \"299\",\n    \"description\" : \"Served with Raitha\",\n    \"availabletime\" : \"6:00 PM to 11:00 PM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addDish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addDish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyDish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modifyDish/Dolphin/noodles/enable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modifyDish",
+						"Dolphin",
+						"noodles",
+						"enable"
+					]
+				},
+				"description": "http://localhost:8080/modifyDish/{restuarantName}/{dishName}/{option}\n\noption in the sense -\n1. enable\n2. Disable\n3. remove"
+			},
+			"response": []
+		},
+		{
+			"name": "addOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restuarantname\" : \"Dolphin\",\n    \"username\" : \"ravi\",\n    \"productdetails\" : \"1. Chicken 65, 2. Dum Biryani\",\n    \"totalvalue\" : \"699\",\n    \"orderstatus\" : \"In Progress\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getOrders"
+					]
+				},
+				"description": "http://localhost:8080/getOrders"
+			},
+			"response": []
+		},
+		{
+			"name": "Getorders for a restuarant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getOrders/Dolphin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getOrders",
+						"Dolphin"
+					]
+				},
+				"description": "http://localhost:8080/getOrders/{restuarant}"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Available Restuarants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/availabelRestuarants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"availabelRestuarants"
+					]
+				},
+				"description": "http://localhost:8080/availabelRestuarants"
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/findrestuarant/dolphin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"findrestuarant",
+						"dolphin"
+					]
+				},
+				"description": "http://localhost:8080/findrestuarant/dolphin"
+			},
+			"response": []
+		},
+		{
+			"name": "feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restuarantname\" : \"Dolphin\",\n    \"username\" : \"Sri Krishna\",\n    \"feedbackdata\" : \"Very good Restuarant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/feedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"feedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Feedback",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getfeedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getfeedback"
+					]
+				},
+				"description": "http://localhost:8080/getfeedback"
+			},
+			"response": []
+		}
+	]
+}
