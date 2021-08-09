@@ -1,0 +1,70 @@
+create schema myusers
+
+CREATE TABLE `myusers`.`user`
+(
+  `username`  VARCHAR(45) NOT NULL,
+  `password`  VARCHAR(45) NULL,
+  `firstname` VARCHAR(45) NOT NULL,
+  `lastname`  VARCHAR(45) NULL,
+  `email`     VARCHAR(45) NULL,
+  `address`   VARCHAR(45) NULL,
+  `phone`     INT         NULL,
+merchant Bool NULL,
+  PRIMARY KEY (`username`)
+);
+
+CREATE TABLE myusers.restuarant
+(
+ id  VARCHAR(45) NOT NULL,
+  username  VARCHAR(45) NOT NULL,
+  password  VARCHAR(45) NULL,
+  restuarantname VARCHAR(10000) NULL,
+  category  VARCHAR(45) NULL,
+  location     VARCHAR(45) NULL,
+  contactdetails     VARCHAR(45) NULL,
+  isapproved     bool NULL,
+  availability     bool NULL
+);
+
+
+CREATE TABLE myusers.dishes
+(
+id varchar(45) NOT NULL,
+resturantname  VARCHAR(45) ,
+dishtype  VARCHAR(45) NULL,
+cusine VARCHAR(45) NULL,
+dishname  VARCHAR(45) NULL,
+dishprice     VARCHAR(45) NULL,
+description   VARCHAR(45) NULL,
+availabletime   VARCHAR(45) NULL,
+enabledish  bool NULL,
+availability bool NULL
+);
+
+
+
+CREATE TABLE myusers.online_orders
+(
+ id  VARCHAR(45) NOT NULL,
+  restuarantname  VARCHAR(45) NOT NULL,
+  username  VARCHAR(45) NULL,
+  productdetails VARCHAR(10000) NULL,
+  totalvalue  VARCHAR(45) NULL,
+  orderstatus     VARCHAR(45) NULL
+);
+
+
+
+CREATE TABLE myusers.feedback
+(
+  restuarantname  VARCHAR(45) NOT NULL,
+  username  VARCHAR(45) NULL,
+  feedbackdata VARCHAR(10000) NULL,
+  PRIMARY KEY (restuarantname)
+);
+
+
+
+
+
+
